@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 🎉Felicidades, princesita🎁</title>
-    
 </head>
 
 <body>
     <h1>¡Feliz Cumpleaños!🎈</h1>
     <canvas id="birthday"></canvas>
+
+    <a href="tarjeta.htm" target="_blank">
+        <button class="gift-button">
+            🎁
+        </button>
+    </a>
 
     <style>
         body {
@@ -29,12 +34,44 @@
             transform: translate(-50%, -50%);
             color: #fff;
             font-family: "Source Sans Pro";
-            font-size: 5em;
+            font-size: 2.6em;
             font-weight: 900;
             -webkit-user-select: none;
             user-select: none;
         }
+
+        /* Estilo para el botón de regalo */
+        .gift-button {
+            display: inline-block;
+            padding: 10px;
+            font-size: 24px;
+            background-color: #ff4081;
+            border: none;
+            border-radius: 50%;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gift-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .gift-button:active {
+            transform: scale(0.9);
+        }
+
+        /* Estilo para colocar el botón debajo del título */
+        a {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     </style>
+
 <script>
 // helper functions
 const PI2 = Math.PI * 2
@@ -49,7 +86,6 @@ class Birthday {
     // create a lovely place to store the firework
     this.fireworks = []
     this.counter = 0
-
   }
   
   resize() {
@@ -61,7 +97,6 @@ class Birthday {
     this.height = canvas.height = window.innerHeight
     this.spawnC = this.height * .1
     this.spawnD = this.height * .5
-    
   }
   
   onClick(evt) {
@@ -78,7 +113,6 @@ class Birthday {
         random(30, 110)))
           
      this.counter = -1
-     
   }
   
   update(delta) {
@@ -104,7 +138,6 @@ class Birthday {
 
     // remove the dead fireworks
     if (this.fireworks.length > 1000) this.fireworks = this.fireworks.filter(firework => !firework.dead)
-
   }
 }
 
@@ -146,7 +179,6 @@ class Firework {
           let targetY = this.y + this.offsprings * Math.sin(PI2 * i / babies) | 0
 
           birthday.fireworks.push(new Firework(this.x, this.y, targetX, targetY, this.shade, 0))
-
         }
 
       }
@@ -184,17 +216,16 @@ document.onclick = evt => birthday.onClick(evt)
 document.ontouchstart = evt => birthday.onClick(evt)
 
   ;(function loop(){
-  	requestAnimationFrame(loop)
+    requestAnimationFrame(loop)
 
-  	let now = timestamp()
-  	let delta = now - then
+    let now = timestamp()
+    let delta = now - then
 
     then = now
     birthday.update(delta / 1000)
-  	
-
   })()
 </script>
+
 </body>
 
 </html>
