@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,7 @@
             /* Set minimum height to ensure content can be scrolled */
             min-height: 100vh;
         }
-        
+
         .container {
             position: relative;
             width: 100%;
@@ -31,7 +32,7 @@
             padding: 50px 0;
             box-sizing: border-box;
         }
-        
+
         h1 {
             font-size: 4em;
             text-align: center;
@@ -41,7 +42,7 @@
             transform: translateY(-50px);
             animation: fadeIn 2s forwards 1s;
         }
-        
+
         .message {
             max-width: 80%;
             text-align: center;
@@ -52,16 +53,17 @@
             transform: scale(0.8);
             animation: scaleIn 2s forwards 3s;
         }
-        
+
         .heart-container {
-            position: fixed; /* Change to fixed so hearts stay visible while scrolling */
+            position: fixed;
+            /* Change to fixed so hearts stay visible while scrolling */
             width: 100%;
             height: 100%;
             top: 0;
             left: 0;
             pointer-events: none;
         }
-        
+
         .heart {
             position: absolute;
             width: 30px;
@@ -71,7 +73,7 @@
             opacity: 0;
             z-index: 0;
         }
-        
+
         .balloon {
             position: absolute;
             width: 40px;
@@ -80,7 +82,7 @@
             opacity: 0;
             z-index: 0;
         }
-        
+
         .balloon::after {
             content: '';
             position: absolute;
@@ -91,7 +93,7 @@
             height: 15px;
             background: #fff;
         }
-        
+
         .number-20 {
             position: absolute;
             font-size: 24px;
@@ -101,16 +103,17 @@
             opacity: 0;
             z-index: 0;
         }
-        
+
         .star {
-            position: fixed; /* Change to fixed so stars stay in place while scrolling */
+            position: fixed;
+            /* Change to fixed so stars stay in place while scrolling */
             width: 3px;
             height: 3px;
             background: white;
             border-radius: 50%;
             opacity: 0;
         }
-        
+
         .memory-container {
             display: flex;
             justify-content: center;
@@ -120,7 +123,7 @@
             opacity: 0;
             animation: fadeIn 2s forwards 5s;
         }
-        
+
         .memory {
             width: 150px;
             height: 150px;
@@ -135,19 +138,20 @@
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
+
         .memory:hover {
             transform: scale(1.1);
             box-shadow: 0 0 25px rgba(230, 0, 115, 0.8);
         }
-        
+
         .memory span {
             font-size: 3em;
             color: white;
         }
-        
+
         .music-button {
-            position: fixed; /* Change to fixed so it stays visible while scrolling */
+            position: fixed;
+            /* Change to fixed so it stays visible while scrolling */
             top: 20px;
             right: 20px;
             background: none;
@@ -162,13 +166,14 @@
             opacity: 0;
             animation: fadeIn 1s forwards 7s;
         }
-        
+
         .music-button:hover {
             background: rgba(255, 255, 255, 0.2);
         }
-        
+
         .final-message {
-            position: fixed; /* Change to fixed so it appears over scrollable content */
+            position: fixed;
+            /* Change to fixed so it appears over scrollable content */
             top: 0;
             left: 0;
             width: 100%;
@@ -185,21 +190,22 @@
             padding: 20px;
             box-sizing: border-box;
         }
-        
+
         .final-message h2 {
             font-size: 3em;
             margin-bottom: 20px;
             text-shadow: 0 0 10px #fff;
         }
-        
+
         .final-message p {
             font-size: 1.5em;
             max-width: 80%;
             line-height: 1.5;
         }
-        
+
         .photo-frame {
-            position: fixed; /* Change to fixed so it stays centered on screen while scrolling */
+            position: fixed;
+            /* Change to fixed so it stays centered on screen while scrolling */
             width: 250px;
             height: 250px;
             border: 5px solid gold;
@@ -215,16 +221,18 @@
             transform: scale(0.5) rotate(-10deg);
             transition: all 0.5s;
         }
-        
+
         .cake {
-            position: relative; /* Change to relative to be part of the flow */
-            margin: 50px auto 100px; /* Add margins to separate from other content */
+            position: relative;
+            /* Change to relative to be part of the flow */
+            margin: 50px auto 100px;
+            /* Add margins to separate from other content */
             width: 150px;
             height: 150px;
             opacity: 0;
             animation: fadeIn 2s forwards 6s;
         }
-        
+
         .cake-layer-1 {
             position: absolute;
             bottom: 0;
@@ -234,7 +242,7 @@
             background: #f9c6cf;
             border-radius: 10px 10px 0 0;
         }
-        
+
         .cake-layer-2 {
             position: absolute;
             bottom: 40px;
@@ -244,7 +252,7 @@
             background: #f193a6;
             border-radius: 8px 8px 0 0;
         }
-        
+
         .cake-layer-3 {
             position: absolute;
             bottom: 75px;
@@ -254,7 +262,7 @@
             background: #e60073;
             border-radius: 8px 8px 0 0;
         }
-        
+
         .candle {
             position: absolute;
             bottom: 105px;
@@ -264,7 +272,7 @@
             background: #fdfd96;
             border-radius: 4px;
         }
-        
+
         .flame {
             position: absolute;
             bottom: 130px;
@@ -275,9 +283,10 @@
             border-radius: 50% 50% 20% 20%;
             animation: flicker 0.5s infinite alternate;
         }
-        
+
         .firework {
-            position: fixed; /* Change to fixed to appear correctly over scrollable content */
+            position: fixed;
+            /* Change to fixed to appear correctly over scrollable content */
             width: 5px;
             height: 5px;
             border-radius: 50%;
@@ -318,96 +327,108 @@
                 top: 5px;
                 opacity: 0.7;
             }
+
             50% {
                 top: 30px;
                 opacity: 0.3;
             }
+
             100% {
                 top: 5px;
                 opacity: 0.7;
             }
         }
-        
+
         @keyframes fadeIn {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         @keyframes scaleIn {
             to {
                 opacity: 1;
                 transform: scale(1);
             }
         }
-        
+
         @keyframes heartBeat {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.2);
             }
+
             100% {
                 transform: scale(1);
             }
         }
-        
+
         @keyframes balloonFloat {
             0% {
                 transform: translateY(0) rotate(0deg);
             }
+
             50% {
                 transform: translateY(-50vh) rotate(5deg);
             }
+
             100% {
                 transform: translateY(-100vh) rotate(-5deg);
             }
         }
-        
+
         @keyframes numberFloat {
             0% {
                 transform: translateY(0) rotate(0deg);
             }
+
             50% {
                 transform: translateY(-50vh) rotate(10deg);
             }
+
             100% {
                 transform: translateY(-100vh) rotate(-10deg);
             }
         }
-        
+
         @keyframes flicker {
             0% {
                 transform: scale(1.0);
                 opacity: 0.8;
             }
+
             100% {
                 transform: scale(1.2);
                 opacity: 1;
             }
         }
-        
+
         @keyframes rotate3D {
             0% {
                 transform: rotateY(0deg);
             }
+
             100% {
                 transform: rotateY(360deg);
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>¡Feliz Cumpleaños Valeska!</h1>
         <div class="message">
-            <p>En este día tan especial, brillan las estrellas por ti.<br>
-            Cada luz en el cielo representa un momento de felicidad que mereces vivir.<br>
-            Cada latido del corazón es un deseo para que tus sueños se hagan realidad.</p>
+            <p>En este día tan especial, brillan las estrellas por ti, niña de los ojitos llenos de luz. ✨<br>  
+                Tu sonrisa, la más hermosa, ilumina el mundo como el sol en la mañana. ☀️<br>  
+                Y esos cachetitos tan bonitos son el reflejo de la dulzura y alegría que llevas en tu corazón. 💖<br>   🎂✨</p>
+                
         </div>
-        
+
         <div class="memory-container">
             <div class="memory" onclick="showMemory('Amistad')">
                 <span>💖</span>
@@ -422,7 +443,7 @@
                 <span>🌟</span>
             </div>
         </div>
-        
+
         <div class="cake">
             <div class="cake-layer-1"></div>
             <div class="cake-layer-2"></div>
@@ -431,50 +452,52 @@
             <div class="flame" id="flame"></div>
         </div>
     </div>
-    
+
     <div class="heart-container"></div>
     <div class="photo-frame" id="photoFrame"></div>
-    
+
     <button class="music-button" onclick="toggleMusic()">🎵 Música</button>
     <div class="scroll-indicator"></div>
-    
+
     <div class="final-message" id="finalMessage">
         <h2>Valeska</h2>
-        <p>Que este nuevo año de vida esté lleno de momentos inolvidables, risas incontables, y sueños cumplidos. Eres una persona increíble que merece toda la felicidad del mundo.</p>
+        <p>"El Señor te bendiga y te guarde; el Señor haga resplandecer su rostro sobre ti y tenga de ti misericordia;
+            el Señor alce sobre ti su rostro y te dé paz." — Números 6:24-26</p>
         <p>¡Feliz Cumpleaños! 🎂✨</p>
+
     </div>
-    
+
     <audio id="birthdayMusic" loop>
         <source src="girlValeska.mp3" type="audio/mp3">
     </audio>
-    
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Create stars in the background
             createStars();
-            
+
             // Create and animate hearts
             setInterval(createHeart, 500);
-            
+
             // Create and animate balloons
             setInterval(createBalloon, 800);
-            
+
             // Create and animate number 20s
             setInterval(createNumber20, 1200);
-            
+
             // Allow clicking anywhere to show the final message
-            document.addEventListener('click', function(e) {
+            document.addEventListener('click', function (e) {
                 if (e.target.className !== 'memory' && e.target.className !== 'music-button') {
                     createFireworks(e.clientX, e.clientY);
                 }
             });
-            
+
             // Make the flame clickable to show final message
-            document.getElementById('flame').addEventListener('click', function() {
+            document.getElementById('flame').addEventListener('click', function () {
                 showFinalMessage();
             });
         });
-        
+
         function createStars() {
             const container = document.querySelector('body');
             for (let i = 0; i < 200; i++) {
@@ -484,38 +507,38 @@
                 star.style.top = `${Math.random() * 100}%`;
                 star.style.width = `${Math.random() * 3 + 1}px`;
                 star.style.height = star.style.width;
-                
+
                 // Random twinkle animation
                 const duration = Math.random() * 3 + 1;
                 star.style.animation = `fadeIn ${duration}s forwards ${Math.random() * 10}s`;
-                
+
                 container.appendChild(star);
             }
         }
-        
+
         function createHeart() {
             const container = document.querySelector('.heart-container');
             const heart = document.createElement('div');
             heart.classList.add('heart');
-            
+
             // Random position
             heart.style.left = `${Math.random() * 100}%`;
             heart.style.bottom = '0';
-            
+
             // Random size
             const size = Math.random() * 30 + 20;
             heart.style.width = `${size}px`;
             heart.style.height = `${size}px`;
-            
+
             // Animation
             heart.style.animation = `fadeIn 1s forwards, heartBeat 1s infinite`;
             heart.style.opacity = '0';
-            
+
             // Movement
             const duration = Math.random() * 10 + 10;
             const targetY = 100 + Math.random() * 20;
             const targetX = parseInt(heart.style.left) + (Math.random() * 40 - 20);
-            
+
             heart.animate([
                 { transform: 'translateY(0) translateX(0)', opacity: 0 },
                 { transform: 'translateY(-100px) translateX(-10px)', opacity: 0.8 },
@@ -524,82 +547,82 @@
                 duration: duration * 1000,
                 easing: 'ease-out'
             });
-            
+
             container.appendChild(heart);
-            
+
             // Remove the heart after animation
             setTimeout(() => {
                 heart.remove();
             }, duration * 1000);
         }
-        
+
         function createBalloon() {
             const container = document.querySelector('.heart-container');
             const balloon = document.createElement('div');
             balloon.classList.add('balloon');
-            
+
             // Random position
             balloon.style.left = `${Math.random() * 100}%`;
             balloon.style.bottom = '0';
-            
+
             // Random color
             const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff', '#ff8800', '#88ff00'];
             balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-            
+
             // Random size
             const size = Math.random() * 20 + 30;
             balloon.style.width = `${size}px`;
             balloon.style.height = `${size * 1.25}px`;
-            
+
             // Animation
             balloon.style.opacity = '0.8';
-            
+
             // Movement
             const duration = Math.random() * 15 + 15;
             const wobble = Math.random() * 50 - 25;
-            
+
             balloon.animate([
                 { transform: 'translateY(0) translateX(0) rotate(0deg)' },
-                { transform: `translateY(-${window.innerHeight}px) translateX(${wobble}px) rotate(${wobble/2}deg)` }
+                { transform: `translateY(-${window.innerHeight}px) translateX(${wobble}px) rotate(${wobble / 2}deg)` }
             ], {
                 duration: duration * 1000,
                 easing: 'ease-out'
             });
-            
+
             container.appendChild(balloon);
-            
+
             // Remove the balloon after animation
             setTimeout(() => {
                 balloon.remove();
             }, duration * 1000);
         }
-        
+
         function createNumber20() {
             const container = document.querySelector('.heart-container');
             const number20 = document.createElement('div');
             number20.classList.add('number-20');
             number20.textContent = '20';
-            
+
             // Random position
             number20.style.left = `${Math.random() * 100}%`;
             number20.style.bottom = '0';
-            
+
             // Random size
             const size = Math.random() * 14 + 26;
             number20.style.fontSize = `${size}px`;
-            
+
             // Random color
             const colors = ['gold', '#ff00ff', '#00ffff', '#ff8800', '#88ff00', '#ffffff'];
             number20.style.color = colors[Math.floor(Math.random() * colors.length)];
-            
+
             // Animation
             number20.style.opacity = '0.9';
-            
+
             // Movement
             const duration = Math.random() * 12 + 10;
             const wobble = Math.random() * 100 - 50;
             const rotation = Math.random() * 360 - 180;
-            
+
             number20.animate([
                 { transform: 'translateY(0) translateX(0) rotate(0deg)', opacity: 0 },
                 { transform: 'translateY(-100px) translateX(0) rotate(10deg)', opacity: 1 },
@@ -608,38 +631,39 @@
                 duration: duration * 1000,
                 easing: 'ease-out'
             });
-            
+
             container.appendChild(number20);
-            
+
             // Remove the number after animation
             setTimeout(() => {
                 number20.remove();
             }, duration * 1000);
         }
-        
+
         function showMemory(type) {
             const photoFrame = document.getElementById('photoFrame');
             photoFrame.style.opacity = '1';
             photoFrame.style.transform = 'scale(1) rotate(0deg)';
-            
+
             let message = '';
-            switch(type) {
+            switch (type) {
                 case 'Amistad':
-                    message = "Los verdaderos amigos son la familia que elegimos. Gracias por ser parte de este hermoso viaje llamado vida.";
+                    message = "El amigo ama en todo momento; en tiempos de angustia es como un hermano. — Proverbios 17:17";
                     break;
                 case 'Sueños':
-                    message = "Nunca dejes de soñar. Tus metas están más cerca de lo que crees. ¡Sigue adelante con determinación!";
+                    message = "Encomienda al Señor tu camino; confía en él, y él actuará. — Salmo 37:5";
                     break;
                 case 'Alegría':
-                    message = "Tu sonrisa ilumina el día de quienes te rodean. Nunca dejes de compartir esa luz con el mundo.";
+                    message = "Pues tengo por cierto que las aflicciones del tiempo presente no son comparables con la gloria venidera que en nosotros ha de manifestarse. — Romanos 8:18";
                     break;
+
                 case 'Vida':
-                    message = "Cada día es un regalo. Disfruta cada momento, cada risa y cada lágrima que te hace ser quien eres.";
+                    message = "Yo he venido para que tengan vida, y la tengan en abundancia. — Juan 10:10";
                     break;
             }
-            
+
             photoFrame.innerHTML = `<div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background: linear-gradient(45deg, #e60073, #ff3c9e); padding: 20px; text-align: center; box-sizing: border-box;"><p style="color: white; font-size: 1.2em;">${message}</p></div>`;
-            
+
             photoFrame.animate([
                 { transform: 'rotateY(0deg)' },
                 { transform: 'rotateY(360deg)' }
@@ -647,7 +671,7 @@
                 duration: 10000,
                 iterations: Infinity
             });
-            
+
             // Hide frame after 10 seconds
             setTimeout(() => {
                 photoFrame.style.opacity = '0';
@@ -656,22 +680,22 @@
                 }, 500);
             }, 10000);
         }
-        
+
         function createFireworks(x, y) {
             const container = document.querySelector('body');
             const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
-            
+
             for (let i = 0; i < 50; i++) {
                 const firework = document.createElement('div');
                 firework.classList.add('firework');
                 firework.style.left = `${x}px`;
                 firework.style.top = `${y}px`;
                 firework.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                
+
                 const angle = Math.random() * Math.PI * 2;
                 const distance = Math.random() * 200 + 50;
                 const duration = Math.random() * 2 + 1;
-                
+
                 firework.animate([
                     { transform: 'translate(0, 0) scale(1)', opacity: 1 },
                     { transform: `translate(${Math.cos(angle) * distance}px, ${Math.sin(angle) * distance}px) scale(0)`, opacity: 0 }
@@ -679,20 +703,20 @@
                     duration: duration * 1000,
                     easing: 'cubic-bezier(0.1, 0.8, 0.9, 0.1)'
                 });
-                
+
                 container.appendChild(firework);
-                
+
                 setTimeout(() => {
                     firework.remove();
                 }, duration * 1000);
             }
         }
-        
+
         function showFinalMessage() {
             const finalMessage = document.getElementById('finalMessage');
             finalMessage.style.opacity = '1';
             finalMessage.style.pointerEvents = 'auto';
-            
+
             // Create many fireworks
             for (let i = 0; i < 10; i++) {
                 setTimeout(() => {
@@ -701,14 +725,14 @@
                     createFireworks(x, y);
                 }, i * 300);
             }
-            
+
             // Hide message after 15 seconds
             setTimeout(() => {
                 finalMessage.style.opacity = '0';
                 finalMessage.style.pointerEvents = 'none';
             }, 15000);
         }
-        
+
         function toggleMusic() {
             const music = document.getElementById('birthdayMusic');
             if (music.paused) {
@@ -719,4 +743,5 @@
         }
     </script>
 </body>
+
 </html>
