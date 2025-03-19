@@ -191,6 +191,22 @@
             box-sizing: border-box;
         }
 
+        .birthday-image {
+            width: 200px;
+            height: 300px;
+            margin: 20px auto;
+            border: 3px solid gold;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+
+        .birthday-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .final-message h2 {
             font-size: 3em;
             margin-bottom: 20px;
@@ -423,10 +439,11 @@
     <div class="container">
         <h1>¡Feliz Cumpleaños Valeska!</h1>
         <div class="message">
-            <p>En este día tan especial, brillan las estrellas por ti, niña de los ojitos llenos de luz. ✨<br>  
-                Tu sonrisa, la más hermosa, ilumina el mundo como el sol en la mañana. ☀️<br>  
-                Y esos cachetitos tan bonitos son el reflejo de la dulzura y alegría que llevas en tu corazón. 💖<br>   🎂✨</p>
-                
+            <p>En este día tan especial, brillan las estrellas por ti, niña de los ojitos llenos de luz. ✨<br>
+                Tu sonrisa, la más hermosa, ilumina el mundo como el sol en la mañana. ☀️<br>
+                Y esos cachetitos tan bonitos son el reflejo de la dulzura y alegría que llevas en tu corazón. 💖<br>
+                🎂✨</p>
+
         </div>
 
         <div class="memory-container">
@@ -463,8 +480,13 @@
         <h2>Valeska</h2>
         <p>"El Señor te bendiga y te guarde; el Señor haga resplandecer su rostro sobre ti y tenga de ti misericordia;
             el Señor alce sobre ti su rostro y te dé paz." — Números 6:24-26</p>
-        <p>¡Feliz Cumpleaños! 🎂✨</p>
 
+        <!-- Espacio para la imagen -->
+        <div class="birthday-image">
+            <img src="Luis1.png" alt="Imagen de cumpleaños" />
+        </div>
+
+        <p>¡Feliz Cumpleaños! 🎂✨</p>
     </div>
 
     <audio id="birthdayMusic" loop>
